@@ -7,7 +7,7 @@ LISTA_TIPO_DOC = (
 	('0', 'PDF'),('1','WORD'),)
 
 class Coordenador (models.Model):
-	matricula = models.CharField(max_length = 30 , primary_key = true )
+	matricula = models.CharField(max_length = 30)
 	nome = models.CharField(max_length = 200)
 	email = models.CharField(max_length = 100)
 	telefone = models.CharField(max_length =11)
