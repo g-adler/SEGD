@@ -25,7 +25,7 @@ SECRET_KEY = '4q(@(t+y9x85e+gdzhen$be6y-jfwq^bpd**zinu8isy7mqt@f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gadlerhron.pythonanywhere.com',]
 
 
 # Application definition
@@ -101,4 +101,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = '/home/gadlerhron/SGED/static/'
+STATIC_URL = '/home/gadlerhron/SGED/static/'
