@@ -1,5 +1,25 @@
+{% load staticfiles  %}
 <html>
+    <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <title>SGED</title>
+	<link rel="stylesheet" href="{% static 'css/coordenacao.css' %}">
+    </head>
+
     <body>
-    <p> nesta pagina teremos o form de login, provavelmente feito a mao junto com um header e um footer</p>
-    </body>    
+      <div id='cabecalho'>
+        <!-- adicionar imagem , jogar pra esquerda-->
+        <p id='rotulo'>Bem vindo ao Sistema Gerenciador de Envio de Documentos</p>
+        <p id='subtitulo'>Instituição de Ensino Superior de Brasília</p>
+      </div>
+
+      <div id='login_table'>
+          <div class="container">
+            <p>Bem vindo!</p>
+          </div>
+      </div>
+
+    <!-- <p> nesta pagina teremos o form de login, provavelmente feito a mao junto com um header e um footer</p> -->
+    </body>
 </html>
