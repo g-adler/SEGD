@@ -26,7 +26,7 @@ SECRET_KEY = '4q(@(t+y9x85e+gdzhen$be6y-jfwq^bpd**zinu8isy7mqt@f'
 DEBUG = True
 
 ALLOWED_HOSTS = ['gadlerhron.pythonanywhere.com',
-		'localhost',		
+		'localhost',
 ]
 
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'sged',
     'coordenacao',
     'direcao',
 )
@@ -103,5 +104,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = '/home/gadlerhron/SGED/static/'
+#STATIC_ROOT = '/home/minc1/sged/sged/sged/static/' # os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = 'index'

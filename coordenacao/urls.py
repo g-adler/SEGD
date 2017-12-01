@@ -1,6 +1,9 @@
 from django.conf.urls import url
 from . import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
-            url(r'^$', views.index , name='index'),
-            ]
+    # url(r'^$', views.index, name='index'),
+    url(r'^$', auth_views.login, {'template_name': 'coordenacao/login.html'}, name='index'),
+    ]
