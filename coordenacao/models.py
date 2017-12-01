@@ -9,7 +9,7 @@ LISTA_TIPO_DOC = (
 # IS_COORD = (
 # 	('0', 'DIRECAO'),('1','COORDENACAO')
 # )
-class Funcionario (models.Model):
+class Coordenador (models.Model):
 	matricula = models.CharField(max_length = 30)
 	nome = models.CharField(max_length = 200)
 	email = models.CharField(max_length = 100)
