@@ -1,0 +1,51 @@
+<style>
+
+ .login_container{
+   margin: 0 auto;
+   width: 600px;
+ }
+
+#rotulo {
+  font-size: 45px;
+  font-style: italic;
+}
+#subtitulo{
+  font-size: 25px;
+  font-weight: bold;
+}
+#cabecalho{
+  border-bottom:  5px solid grey;
+  width: 120%;
+}
+#login_table{
+  padding-left: 50%;
+  padding-right: 50%;
+  margin: auto;
+  border-width: 5px
+  border-style: solid;
+  border-color: #B83625;
+}
+</style>
+
+<html>
+    <head>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <title>{% block title %}SGED{%endblock%}</title>
+    </head>
+
+    <body>
+      <div id='cabecalho'>
+        <img src='{% static 'img/iesb-logo.png' %}'style='float:left; width:100px; height:100px' >
+        <p id='rotulo'>Bem vindo ao Sistema Gerenciador de Envio de Documentos</p>
+        <p id='subtitulo'>Instituição de Ensino Superior de Brasília</p>
+      </div>
+
+
+      <div class="container">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </body>
+</html>
