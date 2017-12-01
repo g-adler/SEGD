@@ -11,3 +11,13 @@ def index (request):
         # func = Funcionario.objects.all()
         from django.conf import settings
         return render(request, 'coordenacao/index.html', {})
+
+def pg_coord(request):
+    from django.conf import settings
+
+    return render(request, 'coordenacao/c_home.html')
+
+def pg_direc(request):
+    from django.conf import settings
+
+    return render(request, 'coordenacao/d_home.html')
