@@ -8,5 +8,6 @@ from .models import Coordenador
 # Create your views here.
 def index (request):
         coords = Coordenador.objects.all()
+        # func = Funcionario.objects.all()
         from django.conf import settings
         return render(request, 'coordenacao/index.html', {})

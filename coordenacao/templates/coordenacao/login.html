@@ -10,10 +10,14 @@
     <div class="panel-body">
       <form method='post'  class="form-inline">
         {% csrf_token %}
-        <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Matrícula</label>
-        {{form.username}}
-        <label for="{{ form.password.id_for_label }}" class="col-sm-3 control-label">Senha</label>
-        {{form.password}}
+        <div class="row">
+          <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Matrícula</label>
+          {{form.username}}
+        </div>
+        <div class="row">
+          <label for="{{ form.password.id_for_label }}" class="col-sm-3 control-label">Senha</label>
+          {{form.password}}
+        </div>
         <button type="submit" class="btn btn-default">Send invitation</button>
       </form>
     </div>

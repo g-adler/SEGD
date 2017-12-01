@@ -6,12 +6,16 @@ from django.db import models
 LISTA_TIPO_DOC = (
 	('0', 'PDF'),('1','WORD'),)
 
-class Coordenador (models.Model):
+# IS_COORD = (
+# 	('0', 'DIRECAO'),('1','COORDENACAO')
+# )
+class Funcionario (models.Model):
 	matricula = models.CharField(max_length = 30)
 	nome = models.CharField(max_length = 200)
 	email = models.CharField(max_length = 100)
 	telefone = models.CharField(max_length =11)
-	
+	# funcao = models.CharField(max_length =1, choices = IS_COORD)
+
 	def __str__(self):
 		return self.nome
 
@@ -28,4 +32,3 @@ class Curso (models.Model):
 
 	def __str__(self):
 		return self.titulo
-
