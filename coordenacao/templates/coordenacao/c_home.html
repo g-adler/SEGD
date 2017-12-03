@@ -3,14 +3,22 @@
 {% block title %}Pagina do Coordenador{% endblock %}
 
 {% block content %}
-
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-success">Aqui teremos os documentos</a>
-  <a href="#" class="list-group-item list-group-item-info">Filtrados por Curso</a>
-  <a href="#" class="list-group-item list-group-item-warning">Que um Coord enviou</a>
-  <a href="#" class="list-group-item list-group-item-danger">e/ou deve enviar</a>
-  <a href="#" class="list-group-item list-group-item-warning">Ou que expirou o prazo</a>
-  <a href="#" class="list-group-item list-group-item-info">Tendo como trigger a funcao de <b>enviar um documento</b></a>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h1 class="panel-title">Listagem de Documentos</h1>
+  </div>
+  <div class="list-group">
+    <!-- criar uma lista de apoio onde o status do doc muda a cor do item na lista,
+    adicionando a classe do BS, success info warning 
+    itens aprovados cor verde, rejeitados vermlho, em analise azul, ainda nao enviados amarelo-->
+    {% for x in Documentos %}
+    <a href="#" class="list-group-item list-group-item-success">Aqui teremos os documentos</a>
+    {% endfor %}
+    <a href="#" class="list-group-item list-group-item-info">Filtrados por Curso</a>
+    <a href="#" class="list-group-item list-group-item-warning">Que um Coord enviou</a>
+    <a href="#" class="list-group-item list-group-item-danger">e/ou deve enviar</a>
+    <a href="#" class="list-group-item list-group-item-warning">Ou que expirou o prazo</a>
+    <a href="#" class="list-group-item list-group-item-info">Tendo como trigger a funcao de <b>enviar um documento</b></a>
+  </div>
 </div>
-
 {% endblock %}

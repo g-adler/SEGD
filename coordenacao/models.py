@@ -6,7 +6,7 @@ from django.db import models
 LISTA_TIPO_DOC = (
 	('0', 'PDF'),('1','WORD'),)
 
-# IS_COORD = (
+# FUNC = (
 # 	('0', 'DIRECAO'),('1','COORDENACAO')
 # )
 class Coordenador (models.Model):
@@ -14,7 +14,7 @@ class Coordenador (models.Model):
 	nome = models.CharField(max_length = 200)
 	email = models.CharField(max_length = 100)
 	telefone = models.CharField(max_length =11)
-	# funcao = models.CharField(max_length =1, choices = IS_COORD)
+	# funcao = models.CharField(max_length =1, choices = FUNC)
 
 	def __str__(self):
 		return self.nome
@@ -22,6 +22,7 @@ class Coordenador (models.Model):
 class Documento (models.Model):
 	coordenador = models.ForeignKey(Coordenador , on_delete=models.CASCADE)
 	titulo = models.CharField(max_length =50)
+	prazo = models.DateField
 	tipo = models.CharField(max_length =1, choices = LISTA_TIPO_DOC, default='0')
 	def __str__(self):
 		return self.titulo
