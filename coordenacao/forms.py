@@ -13,7 +13,7 @@ class CadastrarUsuarioForm(UserCreationForm):
    nome = forms.CharField(max_length = 200)
    email = forms.CharField(max_length = 100)
    telefone = forms.CharField(max_length =11)
-   funcao = forms.ChoiceField(('0','1'))
+   funcao = forms.ChoiceField('0','1')
 
    class Meta:
         model = User
@@ -22,7 +22,7 @@ class CadastrarUsuarioForm(UserCreationForm):
         def save(self, commit=True):
              # como reincorporar considerando que eu precisaria de
              user = super(CadastrarUsuarioForm, self).save(commit=False)
-             user.username = matricula
+             user.username = username
              user.email = email
              user.is_active = true
              if commit:
