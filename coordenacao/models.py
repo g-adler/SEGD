@@ -6,9 +6,9 @@ from django.db import models
 LISTA_TIPO_DOC = (
 	('0', 'PDF'),('1','WORD'),)
 
- FUNC = (
- 	    ('0', 'DIRECAO'),('1','COORDENACAO')
- )
+FUNC = (
+	('0', 'DIRECAO'),('1','COORDENACAO')
+ 	)
 class Coordenador (models.Model):
 	matricula = models.CharField(max_length = 30)
 	nome = models.CharField(max_length = 200)

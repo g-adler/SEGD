@@ -104,7 +104,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = '/home/gadlerhron/SGED/sged/sged/static' 
+STATIC_ROOT = '/home/gadlerhron/SGED/sged/sged/static'
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = 'pgcoord'
+# fornecer valor diferente para o redirect caso x?? seria mais facil, afinal de contas
+LOGIN_REDIRECT_URL = 'pg_coord'

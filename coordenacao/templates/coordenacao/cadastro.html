@@ -1,0 +1,52 @@
+{% extends '../coordenacao/base.html' %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-info down_50">
+  <div class="panel-heading">
+    <h2 class="panel-title">Cadastro de usuário</h2>
+    <p>Preencha o formulário abaixo com os seus dados.</p>
+  </div>
+  <form class="form-horizontal" method="post">{% csrf_token %}
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Matricula</label>
+      <div class="col-sm-4">
+        {{ form.matricula  }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Senha</label>
+      <div class="col-sm-4">
+        {{ form.senha  }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Nome</label>
+      <div class="col-sm-4">
+        {{ form.nome  }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Email</label>
+      <div class="col-sm-4">
+        {{ form.email  }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">Função</label>
+      <div class="col-sm-4">
+        Checkbox coordenador | Direção
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}" class="col-sm-3 control-label">telefone</label>
+      <div class="col-sm-4">
+        {{ form.telefone  }}
+      </div>
+    </div>
+    <input type="submit" class="btn btn-default" value="Cadastrar" />
+  </form>
+</div>
+{% endblock %}
